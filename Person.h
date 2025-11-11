@@ -17,8 +17,16 @@ public:
         cout << "Name: " << name << " (ID: " << id << ")" << endl;
     }
 
-    string getName() const { return name; }
-    int getId() const { return id; }
+    string getName() const { 
+        
+        return name; 
+    
+    }
+    int getId() const {
+        
+        return id; 
+    
+    }
 };
 
 #endif
