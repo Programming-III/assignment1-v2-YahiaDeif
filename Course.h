@@ -16,13 +16,16 @@ private:
     Student* students;
 
 public:
-    Course(string n = "", int i = 0, string code = "", string cname = "", int max = 0)
-        : Instructor(n, i, "", 0), courseCode(code), courseName(cname), maxStudents(max), currentStudents(0)
+    Course(string n = "", int i = 0, string code = "", string cname = "", int max = 0) : Instructor(n, i, "", 0), courseCode(code), courseName(cname), maxStudents(max), currentStudents(0)
     {
         students = new Student[maxStudents];
     }
 
-    ~Course() { delete[] students; }
+    ~Course() { 
+        
+        delete[] students; 
+    
+    }
 
     void addStudent(const Student& s) {
         if (currentStudents < maxStudents) {
@@ -42,7 +45,6 @@ public:
         else {
             for (int i = 0; i < currentStudents; i++) {
                 cout << students[i].getName() << " (ID: " << students[i].getId() << ")";
-                if (i != currentStudents - 1) cout << ", ";
             }
             cout << endl;
         }
@@ -59,5 +61,4 @@ public:
         }
     }
 };
-
 #endif
