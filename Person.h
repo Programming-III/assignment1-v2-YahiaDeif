@@ -1,22 +1,24 @@
 #ifndef PERSON_H
 #define PERSON_H
 
-#include <string>
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Person {
-private:
-	string name;
-	int id;
+protected:
+    string name;
+    int id;
 
 public:
+    Person(string n = "", int i = 0) : name(n), id(i) {}
 
-	void display() {
+    virtual void display() const {
+        cout << "Name: " << name << " (ID: " << id << ")" << endl;
+    }
 
-		cout << "name is: " << name << "id is: " << id << endl;
-
-	}
-
+    string getName() const { return name; }
+    int getId() const { return id; }
 };
+
 #endif
