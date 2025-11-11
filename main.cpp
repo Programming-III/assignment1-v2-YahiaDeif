@@ -6,35 +6,6 @@
 #include "Course.h"
 using namespace std;
 
-// ==================== Person Class Implementation =========================
-
-
-
-
-
-
-// ==================== Student Class Implementation ====================
-
-
-
-
-
-// ==================== Instructor Class Implementation ====================
-
-
-
-
-
-// ==================== Course Class Implementation ====================
-
-
-
-
-
-
-
-
-// ==================== Main Function ====================
 int main() {
    
     Student s1("Omar Nabil", 2202, 2, "Informatics");
